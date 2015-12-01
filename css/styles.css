@@ -1,0 +1,16 @@
+.bold {
+  font-weight: bold;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.error {
+  border-color: red;
+  color: red;
+}
+.success {
+  border-color: green;
+  color: green;
+}
