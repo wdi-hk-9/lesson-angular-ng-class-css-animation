@@ -6,9 +6,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
   <script src="js/app.js"></script>
 </head>
 <body>
+
   <div ng-controller="HomeCtrl" class="well" style="background-color: grey;">
     <input type="text"
            id="name"
@@ -22,6 +24,13 @@
     <h1 ng-class="styles">My name is Denis</h1>
     <button ng-click="changeStyle('bold')">Toggle Bold</button>
     <button ng-click="changeStyle('italics')">Toggle Italics</button>
+  </div>
+
+  <div ng-controller="MyCtrl">
+    <input type="text" ng-model="search">
+    <ul>
+      <li class="animate" ng-repeat="song in songs | filter:search">{{song}}</li>
+    </ul>
   </div>
 
 </body>
